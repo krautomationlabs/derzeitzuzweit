@@ -3,48 +3,120 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Datenschutz – Derzeit zu zweit</title>
-  <link rel="stylesheet" href="assets/css/styles.css" />
+  <title>Datenschutz – derzeit zu zweit</title>
+  <meta name="robots" content="noindex,nofollow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#F6F6F4; --text:#1E1E1E; --muted:rgba(30,30,30,.72);
+      --hair:rgba(30,30,30,.12); --max:960px; --pad:clamp(18px,3vw,42px);
+      --font:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+      --h1:clamp(26px,3vw,40px); --h2:clamp(18px,2vw,24px); --p:clamp(16px,1.25vw,18px);
+    }
+    *{box-sizing:border-box;}
+    body{margin:0;font-family:var(--font);background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased;}
+    a{color:inherit;text-decoration:none;border-bottom:1px solid transparent;}
+    a:hover{border-bottom-color:var(--hair);}
+    .wrap{max-width:var(--max);margin:0 auto;padding:0 var(--pad);}
+    header{padding:22px 0;border-bottom:1px solid var(--hair);}
+    .top{display:flex;align-items:center;justify-content:space-between;gap:16px;}
+    .brand{font-weight:500;letter-spacing:.06em;text-transform:lowercase;opacity:.95;}
+    nav{display:flex;gap:14px;font-size:14px;opacity:.88;}
+    main{padding:clamp(28px,4vw,56px) 0;}
+    h1{margin:0 0 14px 0;font-size:var(--h1);font-weight:500;letter-spacing:-.02em;}
+    h2{margin:22px 0 10px 0;font-size:var(--h2);font-weight:500;letter-spacing:-.01em;}
+    p,li{margin:0 0 12px 0;font-size:var(--p);line-height:1.65;color:var(--muted);}
+    ul{padding-left:18px;margin:0 0 12px 0;}
+    .card{border:1px solid var(--hair);border-radius:14px;padding:18px;background:rgba(255,255,255,.38);}
+    footer{padding:22px 0 40px;border-top:1px solid var(--hair);font-size:13px;color:rgba(30,30,30,.70);}
+  </style>
 </head>
 <body>
-  <header class="topbar">
-    <div class="container row">
-      <a class="brand" href="index.html"><span class="badge">DZ</span><strong>Derzeit zu zweit</strong></a>
-      <nav class="nav"><a href="index.html">Start</a></nav>
-    </div>
-  </header>
 
-  <main class="section">
-    <div class="container">
-      <div class="card">
-        <h2>Datenschutzerklärung</h2>
-        <p>
-          Diese Website ist eine statische Seite. Es werden keine Nutzerkonten angeboten.
-          Server-Logfiles (z. B. IP-Adresse, Zeitpunkt, angeforderte Datei) können durch den Hosting-Anbieter
-          aus technischen Gründen verarbeitet werden.
-        </p>
-        <p>
-          <strong>Verantwortliche</strong><br />
-          Kathrin Reichert, Belfortstr. 28, 68542 Heddesheim<br />
-          E-Mail: <a href="mailto:hallo@derzeitzuzweit.de">hallo@derzeitzuzweit.de</a>
-        </p>
-        <p>
-          <strong>Affiliate-Links</strong><br />
-          Einige Links können Affiliate-Links sein. Beim Klick/bei einer Buchung kann eine Provision entstehen.
-          Für dich ändert sich der Preis nicht.
-        </p>
-        <small>Wenn du später Tracking/Analytics willst, bauen wir das bewusst „privacy-first“ und sauber ein.</small>
-      </div>
-    </div>
-  </main>
+<header>
+  <div class="wrap top">
+    <div class="brand"><a href="index.html">derzeit zu zweit</a></div>
+    <nav aria-label="Navigation">
+      <a href="impressum.html">Impressum</a>
+      <a href="transparenz.html">Transparenz</a>
+    </nav>
+  </div>
+</header>
 
-  <footer>
-    <div class="container row">
-      <div>© <span id="y"></span> Derzeit zu zweit</div>
-      <div><a href="impressum.html">Impressum</a></div>
-    </div>
-  </footer>
+<main>
+  <div class="wrap">
+    <h1>Datenschutz</h1>
 
-  <script>document.getElementById("y").textContent=new Date().getFullYear();</script>
+    <div class="card">
+      <p><strong>Verantwortliche Stelle</strong><br>
+        Kathrin Reichert, Belfortstr. 28, 68542 Heddesheim, Deutschland<br>
+        E-Mail: <a href="mailto:hallo@derzeitzuzweit.de">hallo@derzeitzuzweit.de</a>
+      </p>
+
+      <h2>1. Allgemeines</h2>
+      <p>
+        Wir verarbeiten personenbezogene Daten nur, soweit dies zur Bereitstellung dieser Website,
+        zur Kommunikation oder zur Erfüllung gesetzlicher Pflichten erforderlich ist.
+      </p>
+
+      <h2>2. Hosting & Server-Logs</h2>
+      <p>
+        Beim Aufruf dieser Website werden technisch notwendige Daten verarbeitet (z. B. IP-Adresse, Datum/Uhrzeit,
+        aufgerufene Seite, User-Agent). Diese Daten werden in Server-Logfiles verarbeitet, um den sicheren Betrieb
+        zu gewährleisten. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse).
+      </p>
+
+      <h2>3. Kontaktaufnahme</h2>
+      <p>
+        Wenn Sie uns per E-Mail kontaktieren, verarbeiten wir Ihre Angaben zur Bearbeitung der Anfrage.
+        Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO (vorvertragliche/vertragliche Kommunikation) bzw.
+        Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an Bearbeitung).
+      </p>
+
+      <h2>4. Affiliate-Links / Partnerprogramme</h2>
+      <p>
+        Diese Website kann Links zu Partnern enthalten. Wenn Sie einen solchen Link anklicken, kann der jeweilige
+        Anbieter (Partner) technisch erforderliche Daten verarbeiten, um die Herkunft einer Buchung/Anfrage
+        zuzuordnen (z. B. Cookies/Tracking-Parameter). Details finden Sie im <a href="transparenz.html">Transparenz- & Partnerhinweis</a>.
+      </p>
+
+      <h2>5. Cookies</h2>
+      <p>
+        Wir setzen selbst keine nicht-notwendigen Cookies ein. Wenn über Partnerlinks Drittanbieter-Technologien
+        eingesetzt werden, erfolgt dies im Verantwortungsbereich des jeweiligen Anbieters.
+      </p>
+
+      <h2>6. Ihre Rechte</h2>
+      <ul>
+        <li>Auskunft (Art. 15 DSGVO)</li>
+        <li>Berichtigung (Art. 16 DSGVO)</li>
+        <li>Löschung (Art. 17 DSGVO)</li>
+        <li>Einschränkung der Verarbeitung (Art. 18 DSGVO)</li>
+        <li>Datenübertragbarkeit (Art. 20 DSGVO)</li>
+        <li>Widerspruch (Art. 21 DSGVO)</li>
+        <li>Beschwerde bei einer Aufsichtsbehörde (Art. 77 DSGVO)</li>
+      </ul>
+      <p>
+        Für Anliegen genügt eine E-Mail an <a href="mailto:hallo@derzeitzuzweit.de">hallo@derzeitzuzweit.de</a>.
+      </p>
+
+      <h2>7. Aktualität</h2>
+      <p>
+        Diese Datenschutzerklärung wird bei Bedarf angepasst, z. B. bei Änderungen der Website oder eingesetzten Partnern.
+      </p>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    © <span id="y"></span> derzeit zu zweit · <a href="index.html">Start</a>
+  </div>
+</footer>
+
+<script>document.getElementById("y").textContent=new Date().getFullYear();</script>
 </body>
 </html>
+    
