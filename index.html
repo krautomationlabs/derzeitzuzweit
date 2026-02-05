@@ -19,6 +19,8 @@
       --muted: rgba(30,30,30,.72);
       --hairline: rgba(30,30,30,.12);
       --overlay: rgba(0,0,0,.38);
+      
+      --anchor: #8A9B8F; /* dreckiges Salbei */
 
       --max: 1120px;
       --pad: clamp(18px, 3vw, 42px);
@@ -71,11 +73,33 @@
       justify-content:space-between;
       gap: 16px;
     }
-    .brand{
-      font-weight: 500;
-      letter-spacing: 0.06em;
-      text-transform: lowercase;
-      opacity: .95;
+    
+
+/* Wortmarke – Editorial Anchor */
+.brand {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+/* „derzeit“ – leise, kontrolliert */
+.brand-top {
+  font-size: 11px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  font-weight: 500;
+  opacity: 0.75;
+  margin-bottom: 4px;
+}
+
+/* „zu zweit“ – Anker */
+.brand-bottom {
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--anchor);
+  text-shadow: 0 1px 0 rgba(0,0,0,.18);   
+}
     }
     nav{
       display:flex;
@@ -224,41 +248,19 @@
       nav{ gap: 14px; }
       .hero{ min-height: 82vh; }
     }
+    
   </style>
 </head>
 
 <body>
-<!DOCTYPE html>
-<html lang="de">
-<head>
-  …
-</head>
 
-<body>
-
-  <!-- HIER -->
-  <header>
-    <div class="top">
-      <a href="index.html" class="brand">derzeit zu zweit</a>
-
-      <nav>
-        <a href="index.html">Start</a>
-        <a href="transparenz.html">Transparenz</a>
-        <a href="impressum.html">Impressum</a>
-      </nav>
-    </div>
-  </header>
-
-  <!-- danach -->
-  <section class="hero">
-    …
-  </section>
-
-</body>
-</html>
   <header>
     <div class="wrap top">
-      <div class="brand">derzeit zu zweit</div>
+
+      <div class="brand">
+  <span class="brand-top">derzeit</span>
+  <span class="brand-bottom">zu&nbsp;zweit</span>
+</div>
       <nav aria-label="Navigation">
         <a href="#kurzurlaub">Kurzurlaub</a>
         <a href="#inspiration">Inspiration</a>
