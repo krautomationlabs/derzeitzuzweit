@@ -3,46 +3,97 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Impressum – Derzeit zu zweit</title>
-  <link rel="stylesheet" href="assets/css/styles.css" />
+  <title>Impressum – derzeit zu zweit</title>
+  <meta name="robots" content="noindex,nofollow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#F6F6F4; --text:#1E1E1E; --muted:rgba(30,30,30,.72);
+      --hair:rgba(30,30,30,.12); --max:960px; --pad:clamp(18px,3vw,42px);
+      --font:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+      --h1:clamp(26px,3vw,40px); --p:clamp(16px,1.25vw,18px);
+    }
+    *{box-sizing:border-box;}
+    body{margin:0;font-family:var(--font);background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased;}
+    a{color:inherit;text-decoration:none;border-bottom:1px solid transparent;}
+    a:hover{border-bottom-color:var(--hair);}
+    .wrap{max-width:var(--max);margin:0 auto;padding:0 var(--pad);}
+    header{padding:22px 0;border-bottom:1px solid var(--hair);}
+    .top{display:flex;align-items:center;justify-content:space-between;gap:16px;}
+    .brand{font-weight:500;letter-spacing:.06em;text-transform:lowercase;opacity:.95;}
+    nav{display:flex;gap:14px;font-size:14px;opacity:.88;}
+    main{padding:clamp(28px,4vw,56px) 0;}
+    h1{margin:0 0 14px 0;font-size:var(--h1);font-weight:500;letter-spacing:-.02em;}
+    p{margin:0 0 12px 0;font-size:var(--p);line-height:1.65;color:var(--muted);}
+    .card{border:1px solid var(--hair);border-radius:14px;padding:18px;background:rgba(255,255,255,.38);}
+    .grid{display:grid;grid-template-columns:1fr;gap:18px;}
+    .label{font-size:12px;letter-spacing:.12em;text-transform:uppercase;opacity:.7;margin-bottom:6px;}
+    footer{padding:22px 0 40px;border-top:1px solid var(--hair);font-size:13px;color:rgba(30,30,30,.70);}
+    @media (min-width: 860px){ .grid{grid-template-columns:1.2fr .8fr;} }
+  </style>
 </head>
 <body>
-  <header class="topbar">
-    <div class="container row">
-      <a class="brand" href="index.html"><span class="badge">DZ</span><strong>Derzeit zu zweit</strong></a>
-      <nav class="nav"><a href="index.html">Start</a></nav>
-    </div>
-  </header>
 
-  <main class="section">
-    <div class="container">
-      <div class="card">
-        <h2>Impressum</h2>
-        <p>
-          Angaben gemäß § 5 TMG
-        </p>
-        <p>
-          <strong>Kathrin Reichert</strong><br />
-          Belfortstr. 28<br />
-          68542 Heddesheim<br />
+<header>
+  <div class="wrap top">
+    <div class="brand"><a href="index.html">derzeit zu zweit</a></div>
+    <nav aria-label="Navigation">
+      <a href="index.html#kontakt">Kontakt</a>
+      <a href="transparenz.html">Transparenz</a>
+      <a href="datenschutz.html">Datenschutz</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <h1>Impressum</h1>
+
+    <div class="grid">
+      <section class="card">
+        <div class="label">Angaben gemäß § 5 TMG</div>
+        <p><strong>Kathrin Reichert</strong><br>
+          Belfortstr. 28<br>
+          68542 Heddesheim<br>
           Deutschland
         </p>
+
+        <div class="label" style="margin-top:16px;">Kontakt</div>
         <p>
-          <strong>Kontakt</strong><br />
           E-Mail: <a href="mailto:hallo@derzeitzuzweit.de">hallo@derzeitzuzweit.de</a>
         </p>
-        <small>Stand: 2026</small>
-      </div>
-    </div>
-  </main>
 
-  <footer>
-    <div class="container row">
-      <div>© <span id="y"></span> Derzeit zu zweit</div>
-      <div><a href="datenschutz.html">Datenschutz</a></div>
-    </div>
-  </footer>
+        <div class="label" style="margin-top:16px;">Umsatzsteuer-ID</div>
+        <p>
+          Umsatzsteuer-Identifikationsnummer gemäß § 27a UStG: <em>DE459153689</em>
+        </p>
+      </section>
 
-  <script>document.getElementById("y").textContent=new Date().getFullYear();</script>
+      <aside class="card">
+        <div class="label">Hinweis</div>
+        <p>
+          Inhalte dieser Website werden mit Sorgfalt erstellt. Für Inhalte externer Links sind ausschließlich deren Betreiber verantwortlich.
+        </p>
+
+        <div class="label" style="margin-top:16px;">Rechtliches</div>
+        <p style="margin:0;color:rgba(30,30,30,.78);line-height:1.55;">
+          <a href="datenschutz.html">Datenschutz</a> ·
+          <a href="transparenz.html">Transparenz & Partnerhinweis</a>
+        </p>
+      </aside>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    © <span id="y"></span> derzeit zu zweit · <a href="index.html">Start</a>
+  </div>
+</footer>
+
+<script>document.getElementById("y").textContent=new Date().getFullYear();</script>
 </body>
 </html>
+ 
